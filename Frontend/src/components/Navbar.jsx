@@ -3,6 +3,9 @@ import { assets } from '../assets/assets'
 import { useContext, useState } from 'react'
 import { ShopContext } from '../context/ShopContext'
 
+const adminPanelUrl = import.meta.env.VITE_ADMIN_PANEL_URL
+
+
 const Navbar = () => {
 
   const [visible, setVisible] = useState(false)
@@ -42,11 +45,22 @@ const Navbar = () => {
       </ul>
 
       <div className='flex items-center gap-6'>
+        {token && (
+          <a
+            href={adminPanelUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="hidden sm:flex items-center text-sm text-gray-700 border border-gray-300 rounded-full px-4 py-1  hover:text-black hover:border-black transition"
+          >
+            Admin Panel
+          </a>
+
+        )}
 
         <img onClick={() => {
           setShowSearch(true)
           navigate('/collection')
-          }
+        }
         }
           src={assets.search_icon} alt="search_icon" className='w-5 cursor-pointer' />
 
