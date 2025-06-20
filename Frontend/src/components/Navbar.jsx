@@ -50,7 +50,7 @@ const Navbar = () => {
             href={adminPanelUrl}
             target="_blank"
             rel="noopener noreferrer"
-            className="hidden sm:flex items-center text-sm text-gray-700 border border-gray-300 rounded-full px-4 py-1  hover:text-black hover:border-black transition"
+            className="hidden sm:flex items-center text-sm text-gray-700 border border-gray-300 rounded-full px-4 py-1  hover:text-black hover:border-black transition cursor-pointer"
           >
             Admin Panel
           </a>
